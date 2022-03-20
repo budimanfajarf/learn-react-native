@@ -2,13 +2,15 @@ import { StyleSheet, View, Text } from 'react-native';
 
 const styles = StyleSheet.create({
   center: {
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 })
 
-const Greeting = (props: {
+type greetingProps = {
   name: string,
-}) => {
+};
+
+const Greeting = (props: greetingProps) => {
   return (
     <View style={styles.center}>
       <Text>Hello {props.name}!</Text>
@@ -16,9 +18,9 @@ const Greeting = (props: {
   );
 }
 
-const LotsOfGreetings = () => {
+export function LotsOfGreeting() {
   return (
-    <View style={[styles.center, {top: 50}]}>
+    <View style={[styles.center, { top: 50 }]}>
       <Greeting name='Rexxar' />
       <Greeting name='Jaina' />
       <Greeting name='Valeera' />
@@ -26,4 +28,4 @@ const LotsOfGreetings = () => {
   );
 }
 
-export default LotsOfGreetings;
+export default Greeting;

@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
-import LotsOfGreeting from './components/Greeting';
+import Greeting from './components/Greeting';
+import { LotsOfGreeting } from './components/Greeting';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,6 +14,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello World!</Text>
+
+      <Greeting name="Budi" />
 
       <LotsOfGreeting />
     </View>
