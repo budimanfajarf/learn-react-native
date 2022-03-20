@@ -14,6 +14,12 @@ const styles = StyleSheet.create({
 export default function App() {
   const [count, setCount] = useState(0);
 
+  const term = count > 1 ? 'times' : 'time';
+
+  const text = count === 0
+    ? `You haven't click the button`
+    : `You click the button ${count} ${term}`;
+
   return (
     <View style={styles.container}>
       <Text>Hello World!</Text>
@@ -23,7 +29,7 @@ export default function App() {
       <LotsOfGreeting />
 
       <View style={{ top: 100 }}>
-        <Text>You click the button {count} times</Text>
+        <Text>{text}</Text>
         <Button
           onPress={() => setCount(count + 1)}
           title="Click Me!"
