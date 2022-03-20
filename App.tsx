@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 
-export default function App() {
+const App = () => {
   return(
     <View
       style={{
@@ -13,3 +13,5 @@ export default function App() {
     </View>
   )
 }
+
+export default App;
