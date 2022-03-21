@@ -35,6 +35,10 @@ export default function App() {
           title="Click Me!"
         />
       </View>
+
+      <View style={{ top: 150 }}>
+        <Text>First feature</Text>
+      </View>
     </View>
   );
 }
