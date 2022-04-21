@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import Greeting from './components/Greeting';
-import { LotsOfGreeting } from './components/Greeting';
+import { Greeting, LotsOfGreeting } from './components/Greeting';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,7 +25,11 @@ export default function App() {
 
       <Greeting name="Budi" />
 
-      <LotsOfGreeting />
+      <LotsOfGreeting items={[
+        { name: "Rexar" },
+        { name: "Jaina" },
+        { name: "Valeera"},
+      ]} />
 
       <View style={{ top: 100 }}>
         <Text>{text}</Text>

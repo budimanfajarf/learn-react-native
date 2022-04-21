@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
   },
 })
 
-type greetingProps = {
+type GreetingProps = {
   name: string,
 };
 
-const Greeting = (props: greetingProps) => {
+export function Greeting (props: GreetingProps) {
   return (
     <View style={styles.center}>
       <Text>Hello {props.name}!</Text>
@@ -18,14 +18,14 @@ const Greeting = (props: greetingProps) => {
   );
 }
 
-export function LotsOfGreeting() {
+export function LotsOfGreeting(props: {
+  items: Array<GreetingProps>,
+}) {
   return (
     <View style={[styles.center, { top: 50 }]}>
-      <Greeting name='Rexxar' />
-      <Greeting name='Jaina' />
-      <Greeting name='Valeera' />
+      {props.items.map((item: GreetingProps) => (
+        <Greeting name={item.name} />
+      ))}
     </View>
   );
 }
-
-export default Greeting;
