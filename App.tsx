@@ -1,47 +1,18 @@
-import { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { Greeting, LotsOfGreeting } from './components/Greeting';
+import { View, Text, StyleSheet } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Start Programming with Mosh</Text>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'dodgerblue',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
-
-export default function App() {
-  const [count, setCount] = useState(0);
-
-  const term = count > 1 ? 'times' : 'time';
-
-  const text = count === 0
-    ? `You haven't click the button`
-    : `You click the button ${count} ${term}`;
-
-  return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-
-      <Greeting name="Budi" />
-
-      <LotsOfGreeting items={[
-        { name: "Rexar" },
-        { name: "Jaina" },
-        { name: "Valeera"},
-      ]} />
-
-      <View style={{ top: 100 }}>
-        <Text>{text}</Text>
-        <Button
-          onPress={() => setCount(count + 1)}
-          title="Click Me!"
-        />
-      </View>
-
-      <View style={{ top: 150 }}>
-        <Text>First feature</Text>
-      </View>
-    </View>
-  );
-}
