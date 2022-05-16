@@ -1,10 +1,10 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Start Programming with Mosh</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -12,7 +12,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'dodgerblue',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
