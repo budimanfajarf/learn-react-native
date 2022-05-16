@@ -24,7 +24,7 @@ export function LotsOfGreeting(props: {
   return (
     <View style={[styles.center, { top: 50 }]}>
       {props.items.map((item: GreetingProps) => (
-        <Greeting name={item.name} />
+        <Greeting key={item.name} name={item.name} />
       ))}
     </View>
   );
